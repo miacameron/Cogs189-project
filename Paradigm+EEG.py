@@ -20,7 +20,7 @@ def Paradigm (num_trials = 1): #constructing what our session will look like
     terminate = False
     
     #Array filled with problems to present 
-    problem_set =  ['3 ^ (8*4) % 3','(40 ÷ 4 (3+2) ) ^ 2','Compute the second derivative of f(x) = 10x^2 + 8x^3']
+    problem_set =  ['( 40 ÷ 4(3+2) )^2','3^(8*4) % 3','Compute the second derivative of f(x) = 10x^2 + 8x^3','Compute the second integral of f(x) = 10x + 3x^2 + 7','Compute the second derivative of f(x) = 3x^4 - 4x^2 + 3x + 2','sqrt(400) * 7 - 11^2','Solve for x, x + 27 = ½ + 15 + 2x','Compute the second integral of f(x) = 4x^3 - 19x + 2x^4']
     random.shuffle(problem_set)
     
     #Instructions for entire task 
