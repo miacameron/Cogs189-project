@@ -60,6 +60,9 @@ def Paradigm (num_trials = 1): #constructing what our session will look like
                     )
                     
     for i in range(num_trials):
+        #turn trial number into string
+        trial = str(i)
+        
         #Problem to solve
         problem_text = psychopy.visual.TextStim(win,
                     problem_set[i], font='Open Sans', units='pix', 
@@ -122,11 +125,11 @@ def Paradigm (num_trials = 1): #constructing what our session will look like
                 break
         
         # Once results found, display them
-        text.text = f'Classifier returned: {results[0]}'
-        print(f'{text.text}')
-        for frame in range(MsToFrames(1000, refresh_rate)):
-            text.draw()
-            win.flip()
+        #text.text = f'Classifier returned: {results[0]}'
+        #print(f'{text.text}')
+        #for frame in range(MsToFrames(1000, refresh_rate)):
+            #text.draw()
+           # win.flip()
         
         # 1000ms blank screen
         for frame in range(MsToFrames(1000, refresh_rate)):
