@@ -74,24 +74,24 @@ def Paradigm (num_trials = 1): #constructing what our session will look like
                 win.flip()
             
         # 10000ms prompt to start relaxing
-        for frame in range(MsToFrames(2000, refresh_rate)):
+        for frame in range(MsToFrames(10000, refresh_rate)):
             relax_text1.draw()
             win.flip()
             
         # 60000ms blank screen (send LSL marker here)
-        for frame in range(MsToFrames(3000, refresh_rate)):
+        for frame in range(MsToFrames(60000, refresh_rate)):
             # Send LSL marker on first frame
             if frame == 0:
                 mrkstream_out.push_sample(pylsl.vectorstr([trial]))
             win.flip()
             
         # 10000ms prompt to start problem solving task
-        for frame in range(MsToFrames(2000, refresh_rate)):
+        for frame in range(MsToFrames(10000, refresh_rate)):
             thinking_text.draw()
             win.flip()
         
         # 60000ms solve problem screen (send LSL marker here)
-        for frame in range(MsToFrames(3000, refresh_rate)):
+        for frame in range(MsToFrames(60000, refresh_rate)):
             # Send LSL marker on first frame
             if frame == 0:
                 mrkstream_out.push_sample(pylsl.vectorstr([trial]))
@@ -99,7 +99,7 @@ def Paradigm (num_trials = 1): #constructing what our session will look like
             win.flip()
             
         # 10000ms prompt to start relaxing again with eyes closed
-        for frame in range(MsToFrames(2000, refresh_rate)):
+        for frame in range(MsToFrames(10000, refresh_rate)):
             relax_text2.draw()
             win.flip()
             
