@@ -71,7 +71,7 @@ def Paradigm (num_trials = 1): #constructing what our session will look like
                     )
     
         if i == 0: # 2000 ms overall instructions at the first trial
-            while not event.getKeys():
+            while not psychopy.event.getKeys():
             #for frame in range(MsToFrames(2000, refresh_rate)):
                 intro_text.draw()
                 win.flip()
@@ -162,7 +162,7 @@ if __name__ == "__main__":
     
     # Initialize LSL marker streams
     mrkstream_out = lsl_mrk_outlet('Task_Markers') # important this is first
-    results_in = lsl_inlet('Result_Stream')
+    results_in = lsl_inlet('relax_smeb')
 
     # Create PsychoPy window
     win = psychopy.visual.Window(
@@ -178,4 +178,4 @@ if __name__ == "__main__":
     time.sleep(1)
     
     # Run through paradigm
-    Paradigm(3)
+    Paradigm(4)
