@@ -77,7 +77,7 @@ if __name__ == "__main__":
     random.seed()
     results_out = lsl_mrk_outlet('Result_Stream')
     mrkstream_in = lsl_inlet('Task_Markers')
-    eeg_in = lsl_inlet('ollie_EEG')
+    eeg_in = lsl_inlet('relax_smeb')
 
     # Run out main function
     main()
